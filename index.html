@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=\, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+      integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Presentation</title>
+  </head>
+  <body>
+    <!-- section 1  -->
+    <section id="page-1" class="page">
+      <h1>Welcome to my presentation</h1>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis
+        dicta deleniti odio molestiae saepe nihil dignissimos veritatis repellat
+        sunt repudiandae reiciendis soluta possimus hic nemo, aliquam, dolor
+        veniam dolore dolores id et. Qui vitae, adipisci magnam magni quasi
+        tempora officiis.
+      </p>
+      <div>
+        <a href="#page-2" class="btn">
+          Next Page <i class="fas fa-arrow-circle-down"></i>
+        </a>
+      </div>
+    </section>
+
+    <!-- section 2 -->
+    <section id="page-2" class="page">
+      <h1>Page 2</h1>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis
+        dicta deleniti odio molestiae saepe nihil dignissimos veritatis repellat
+        sunt repudiandae reiciendis soluta possimus hic nemo, aliquam, dolor
+        veniam dolore dolores id et. Qui vitae, adipisci magnam magni quasi
+        tempora officiis.
+      </p>
+      <div>
+        <a href="#page-1" class="btn btn-dark">
+          Prev Next <i class="fas fa-arrow-circle-up"></i>
+        </a>
+
+        <a href="#page-3" class="btn">
+          Next Page <i class="fas fa-arrow-circle-down"></i>
+        </a>
+      </div>
+    </section>
+
+    <!-- section 3 -->
+    <section id="page-3" class="page">
+      <h1>Page 3</h1>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis
+        dicta deleniti odio molestiae saepe nihil dignissimos veritatis repellat
+        sunt repudiandae reiciendis soluta possimus hic nemo, aliquam, dolor
+        veniam dolore dolores id et. Qui vitae, adipisci magnam magni quasi
+        tempora officiis.
+      </p>
+      <div>
+        <a href="#page-2" class="btn btn-dark">
+          Prev Next <i class="fas fa-arrow-circle-up"></i>
+        </a>
+
+        <a href="#page-4" class="btn">
+          Next Page <i class="fas fa-arrow-circle-down"></i>
+        </a>
+      </div>
+    </section>
+
+    <!-- section 3 -->
+    <section id="page-4" class="page">
+      <h1>Page 4</h1>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis
+        dicta deleniti odio molestiae saepe nihil dignissimos veritatis repellat
+        sunt repudiandae reiciendis soluta possimus hic nemo, aliquam, dolor
+        veniam dolore dolores id et. Qui vitae, adipisci magnam magni quasi
+        tempora officiis.
+      </p>
+      <div>
+        <a href="#page-3" class="btn">
+          Prev Page <i class="fas fa-arrow-circle-up"></i>
+        </a>
+        <a href="#page-1" class="btn">
+          Bact To Home <i class="fas fa-arrow-circle-up"></i>
+        </a>
+      </div>
+    </section>
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.min.js"
+      integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $(".btn").on("click", function (event) {
+        if (this.hash !== "") {
+          event.preventDefault();
+          const hash = this.hash;
+          $("html, body").animate(
+            {
+              scrollTop: $(hash).offset().top,
+            },
+            800
+          );
+        }
+      });
+    </script>
+  </body>
+</html>
